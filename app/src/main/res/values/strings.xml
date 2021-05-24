@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">GoogleMapDemo</string>
+    <string name="grant_location_description">Grant permission to get your location</string>
+    <string name="direction_indicator">Direction Indicator</string>
+    <string name="route_info">FROM: %1$s \nTO %2$s, \nDistance:%3$s, TIME: %4$s</string>
+    <string name="search_location">Where do you want to go?</string>
+    <string name="not_found_any_way">Not found any way</string>
+    <string name="please_turn_on_gps">Please turn on GPS!</string>
+    <string name="direct">Direct</string>
+</resources>

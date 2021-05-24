@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/viewTopLine"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="5dp"
+        android:layout_height="15dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/viewTopLine"
+        app:layout_constraintStart_toStartOf="@+id/viewTopLine"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivDirection"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:contentDescription="@null"
+        android:padding="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/tvDistance"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewTopLine"
+        tools:src="@drawable/ic_fork_left" />
+
+    <TextView
+        android:id="@+id/tvDistance"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivDirection"
+        app:layout_constraintTop_toBottomOf="@+id/viewTopLine"
+        tools:text="500m" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
