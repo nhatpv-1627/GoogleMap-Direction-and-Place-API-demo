@@ -47,11 +47,6 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
     private lateinit var btnDirect: Button
     private lateinit var tvRouteInfo: TextView
     private lateinit var rvSearch: RecyclerView
-    private lateinit var tvLocationName: TextView
-    private lateinit var tvPhone: TextView
-    private lateinit var ratingBar: RatingBar
-    private lateinit var ivFirstImage: ImageView
-    private lateinit var ivSecondImage: ImageView
 
 
     private lateinit var searchAdapter: SearchAdapter
@@ -69,7 +64,8 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
     private val placeLatLngFields: List<Place.Field> = listOf(Place.Field.LAT_LNG)
 
     // Use the builder to create a FindCurrentPlaceRequest.
-    private val request: FindCurrentPlaceRequest = FindCurrentPlaceRequest.newInstance(placeLatLngFields)
+    private val request: FindCurrentPlaceRequest =
+        FindCurrentPlaceRequest.newInstance(placeLatLngFields)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -240,7 +236,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
             val placeResponse = placesClient.findCurrentPlace(request)
             placeResponse.addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-                    Log.d("cccccc", "${task.result.placeLikelihoods}")
+                    Log.d("AROUND LOCATION:", "${task.result.placeLikelihoods}")
                 } else {
                     Toast.makeText(
                         this,
@@ -269,7 +265,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
         val area = LatLng(16.131868, 108.116873)
         addMarker(area)
         map.setOnMapClickListener {
-            Log.d("cccccc", "${it.latitude}, ${it.longitude}")
+            Log.d("MAP CLICK", "${it.latitude}, ${it.longitude}")
         }
     }
 
